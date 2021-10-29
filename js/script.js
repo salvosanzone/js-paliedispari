@@ -44,7 +44,5 @@ console.log('errorMsg', errorMsg)
 
 
 //somma dei due numeri
-// const sommaNum = numPlayer + numComputer;
-// console.log('la somma dei due numeri è', sommaNum);
-
-// if()
+const sommaNum = numPlayer + numComputer;
+console.log('la somma dei due numeri è', sommaNum);
