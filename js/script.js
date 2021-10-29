@@ -21,25 +21,31 @@ let giocoValido = false;
 let errorMsg = '';
 if(numPlayer % 2 == 0){
   giocoValido = true;
-}else errorMsg = 'Inserisci un numero corretto';
+}else {
+  errorMsg = 'Inserisci un numero corretto';
+}
+
 console.log('giocoValido', giocoValido)
 console.log('errorMsg', errorMsg)
 
 
 //numero random generato con una funzione
-function numComputer(min, max){
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}console.log('il numero scelto dal computer è',numComputer(1, 5));
+function getNumberRandom(min, max){
+  return Math.floor(Math.random() * (max - min + 1) + min);//outpt
+}
+//rendo l'outuput una variabile 
+const numComputer = getNumberRandom(1, 5);
+console.log('il numero scelto dal computer è',numComputer);
 
 //verifica computer
 //verifica
-let giocoValido = false;
-let errorMsg = '';
-if(numComputer % 3 == 0){
-  giocoValido = true;
-}else errorMsg = 'Inserisci un altro numero random';
-console.log('giocoValido', giocoValido)
-console.log('errorMsg', errorMsg)
+// let giocoValido = false;
+// let errorMsg = '';
+// if(numComputer % 2 != 0){
+//   giocoValido = true;
+// }else errorMsg = 'Inserisci un altro numero random';
+// console.log('giocoValido', giocoValido)
+// console.log('errorMsg', errorMsg)
 
 
 
