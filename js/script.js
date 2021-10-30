@@ -16,21 +16,21 @@ console.log('pari o dispari?',pariOdispari);
 const numPlayer = '2' // parseInt(prompt(''));  
 console.log('il numero scelto dal player è',numPlayer);
 
-//verifica player
-let giocoValido = false;
-let errorMsg = '';
-if(numPlayer % 2 == 0){
-  giocoValido = true;
-}else {
-  errorMsg = 'Inserisci un numero corretto';
-}
+// //verifica player
+// let giocoValido = false;
+// let errorMsg = '';
+// if(numPlayer % 2 == 0){
+//   giocoValido = true;
+// }else {
+//   errorMsg = 'Inserisci un numero corretto';
+// }
 
-console.log('giocoValido', giocoValido)
-console.log('errorMsg', errorMsg)
+// console.log('giocoValido', giocoValido)
+// console.log('errorMsg', errorMsg)
 
 
 //numero random generato con una funzione
-function getNumberRandom(min, max){
+function getNumberRandom(min, max){ 
   return Math.floor(Math.random() * (max - min + 1) + min);//outpt
 }
 //rendo l'outuput una variabile 
@@ -47,8 +47,20 @@ console.log('il numero scelto dal computer è',numComputer);
 // console.log('giocoValido', giocoValido)
 // console.log('errorMsg', errorMsg)
 
-
-
 //somma dei due numeri
 const sommaNum = numPlayer + numComputer;
 console.log('la somma dei due numeri è', sommaNum);
+
+//verifico, con una funzione, se la somma dei due numeri è pari o dispari
+function verificaPariDispari(sommaNumeri){
+  if(sommaNum % 2 == 0){
+    return 'pari'
+  }
+  return 'dispari'
+}
+
+//chiamo la funzione(verificaPariDispari) e gli passo come parametro/input l'elemento (sommaNum) che mi interessa verificare 
+const risultato = verificaPariDispari(sommaNum);
+console.log('la somma dei due numeri è',risultato);
+
+
